@@ -1,0 +1,3 @@
+[submodule "dashboard-webserver"]
+	path = dashboard-webserver
+	url = https://github.com/Coffee-Dog/dashboard-webserver
