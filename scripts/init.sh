@@ -7,7 +7,7 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 source "$SCRIPT_DIR/lib/logger.sh"
 
 # Configuration
-PROJECT_ROOT="$(pwd)"
+PROJECT_ROOT="./dashboard-webserver"
 SETUP_LOG="$PROJECT_ROOT/setup.log"
 
 # Function to log all output
@@ -43,7 +43,7 @@ main_init() {
     fi
     
     print_step 3 "Creating default authentication users"
-    if "$SCRIPT_DIR/auth-setup.sh" create; then
+    if "$SCRIPT_DIR/auth-setup.sh" create "$PROJECT_ROOT"; then
         print_success "Authentication setup completed"
         log_setup "Auth setup: SUCCESS"
     else

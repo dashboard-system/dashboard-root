@@ -3,23 +3,24 @@
 # Source logging utilities
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 source "$SCRIPT_DIR/lib/logger.sh"
-
+ROOT_DIR="${2:-./dashboard-webserver}"
+echo ${ROOT_DIR}
 # Configuration
-DB_FILE="./db/sqlite.db"
+DB_FILE="${ROOT_DIR}/db/sqlite.db"
 SALT_ROUNDS=12
 
 # Check dependencies
 check_dependencies() {
     local missing_deps=()
-    
-    if [ ! -d "node_modules/better-sqlite3" ]; then
+    echo ${ROOT_DIR}/node_modules/better-sqlite3
+    if [ ! -d "${ROOT_DIR}/node_modules/better-sqlite3" ]; then
         missing_deps+=("better-sqlite3")
     fi
     
-    if [ ! -d "node_modules/bcryptjs" ]; then
+    if [ ! -d "${ROOT_DIR}/node_modules/bcryptjs" ]; then
         missing_deps+=("bcryptjs")
     fi
-    
+
     if [ ${#missing_deps[@]} -gt 0 ]; then
         print_error "Missing dependencies: ${missing_deps[*]}"
         log_info "Install with: npm install ${missing_deps[*]}"
@@ -51,12 +52,21 @@ create_default_users() {
     
     log_info "Creating default users with encrypted passwords..."
     
-    # Create users using Node.js script
-    node -e "
+    # Create users using Node.js script - Fixed path
+    # Calculate relative DB path from ROOT_DIR
+    local DB_PATH
+    if [[ "$DB_FILE" == ./* ]]; then
+        # Remove the ROOT_DIR prefix from DB_FILE to get relative path
+        DB_PATH="${DB_FILE#$ROOT_DIR/}"
+    else
+        DB_PATH="$DB_FILE"
+    fi
+    
+    (cd "$ROOT_DIR" && node -e "
         const Database = require('better-sqlite3');
         const bcrypt = require('bcryptjs');
         
-        const db = new Database('$DB_FILE');
+        const db = new Database('$DB_PATH');
         
         async function createUsers() {
             try {
@@ -107,7 +117,7 @@ create_default_users() {
         }
         
         createUsers();
-    "
+    ")
     
     if [ $? -eq 0 ]; then
         print_success "Default users created successfully"
@@ -174,11 +184,20 @@ add_user() {
     # Create user
     log_info "Creating user: $username"
     
-    node -e "
+    # Calculate relative DB path from ROOT_DIR
+    local DB_PATH
+    if [[ "$DB_FILE" == ./* ]]; then
+        # Remove the ROOT_DIR prefix from DB_FILE to get relative path
+        DB_PATH="${DB_FILE#$ROOT_DIR/}"
+    else
+        DB_PATH="$DB_FILE"
+    fi
+    
+    (cd "$ROOT_DIR" && node -e "
         const Database = require('better-sqlite3');
         const bcrypt = require('bcryptjs');
         
-        const db = new Database('$DB_FILE');
+        const db = new Database('$DB_PATH');
         
         async function addUser() {
             try {
@@ -213,7 +232,7 @@ add_user() {
         }
         
         addUser();
-    "
+    ")
     
     if [ $? -eq 0 ]; then
         print_success "User '$username' created successfully"
@@ -232,9 +251,18 @@ list_users() {
         return 1
     fi
     
-    node -e "
+    # Calculate relative DB path from ROOT_DIR
+    local DB_PATH
+    if [[ "$DB_FILE" == ./* ]]; then
+        # Remove the ROOT_DIR prefix from DB_FILE to get relative path
+        DB_PATH="${DB_FILE#$ROOT_DIR/}"
+    else
+        DB_PATH="$DB_FILE"
+    fi
+    
+    (cd "$ROOT_DIR" && node -e "
         const Database = require('better-sqlite3');
-        const db = new Database('$DB_FILE');
+        const db = new Database('$DB_PATH');
         
         try {
             const users = db.prepare('SELECT id, username, created_at, updated_at FROM users ORDER BY id').all();
@@ -261,7 +289,7 @@ list_users() {
         } finally {
             db.close();
         }
-    "
+    ")
 }
 
 # Delete user
@@ -282,9 +310,18 @@ delete_user() {
     fi
     
     if [ "$(confirm "Are you sure you want to delete user '$username'?")" = "yes" ]; then
-        node -e "
+        # Calculate relative DB path from ROOT_DIR
+        local DB_PATH
+        if [[ "$DB_FILE" == ./* ]]; then
+            # Remove the ROOT_DIR prefix from DB_FILE to get relative path
+            DB_PATH="${DB_FILE#$ROOT_DIR/}"
+        else
+            DB_PATH="$DB_FILE"
+        fi
+        
+        (cd "$ROOT_DIR" && node -e "
             const Database = require('better-sqlite3');
-            const db = new Database('$DB_FILE');
+            const db = new Database('$DB_PATH');
             
             try {
                 const username = '$username';
@@ -318,7 +355,7 @@ delete_user() {
             } finally {
                 db.close();
             }
-        "
+        ")
         
         if [ $? -eq 0 ]; then
             print_success "User '$username' deleted successfully"
@@ -343,9 +380,18 @@ reset_users() {
     if [ "$(confirm "Are you sure you want to reset all users?")" = "yes" ]; then
         log_info "Clearing users table..."
         
-        node -e "
+        # Calculate relative DB path from ROOT_DIR
+        local DB_PATH
+        if [[ "$DB_FILE" == ./* ]]; then
+            # Remove the ROOT_DIR prefix from DB_FILE to get relative path
+            DB_PATH="${DB_FILE#$ROOT_DIR/}"
+        else
+            DB_PATH="$DB_FILE"
+        fi
+        
+        (cd "$ROOT_DIR" && node -e "
             const Database = require('better-sqlite3');
-            const db = new Database('$DB_FILE');
+            const db = new Database('$DB_PATH');
             
             try {
                 db.exec('DELETE FROM users');
@@ -357,7 +403,7 @@ reset_users() {
             } finally {
                 db.close();
             }
-        "
+        ")
         
         if [ $? -eq 0 ]; then
             print_success "Users table cleared"
