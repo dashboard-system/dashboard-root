@@ -1,0 +1,63 @@
+version: '3.8'
+
+services:
+  # MQTT Server
+  mqtt-server:
+    build:
+      context: ./mqtt_server
+      dockerfile: Dockerfile
+    container_name: mqtt-server-container
+    env_file:
+      - ./mqtt_server/.env
+    ports:
+      - "1883:1883"    # MQTT
+      - "8883:8883"    # MQTT WebSocket  
+      - "3001:3001"    # Web server
+    volumes:
+      - ./mqtt_server/logs:/app/logs
+      - ./mqtt_server/uci:/app/uci
+      - ./mqtt_server/uci_backup:/app/uci_backup
+    restart: unless-stopped
+    networks:
+      - dashboard-network
+    healthcheck:
+      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost:3001/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # Dashboard Webserver
+  dashboard-webserver:
+    build:
+      context: ./dashboard-webserver
+      dockerfile: Dockerfile
+      target: production
+    container_name: dashboard-webserver-container
+    env_file:
+      - ./dashboard-webserver/.env
+    ports:
+      - "3000:3000"
+    volumes:
+      - dashboard-data:/app/db
+      - dashboard-logs:/app/logs
+    restart: unless-stopped
+    networks:
+      - dashboard-network
+    healthcheck:
+      test: ["CMD", "node", "-e", "require('http').get('http://localhost:3000/health', (res) => { process.exit(res.statusCode === 200 ? 0 : 1) })"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    depends_on:
+      - mqtt-server
+
+volumes:
+  dashboard-data:
+    driver: local
+  dashboard-logs:
+    driver: local
+
+networks:
+  dashboard-network:
+    driver: bridge
