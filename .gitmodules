@@ -1,3 +1,8 @@
 [submodule "dashboard-webserver"]
 	path = dashboard-webserver
 	url = https://github.com/Coffee-Dog/dashboard-webserver
+	branch = main
+[submodule "mqtt_server"]
+	path = mqtt_server
+	url = https://github.com/dashboard-system/mqtt_server.git
+	branch = main
