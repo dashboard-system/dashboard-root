@@ -171,8 +171,16 @@ log_file_operation() {
     esac
 }
 
+# Setup log function for compatibility with original script
+log_setup() {
+    local message="$1"
+    if [ -n "$SETUP_LOG" ]; then
+        echo "$(date '+%Y-%m-%d %H:%M:%S') - $message" >> "$SETUP_LOG"
+    fi
+}
+
 # Export functions for use in other scripts
 export -f log_debug log_info log_warn log_error log_success log_with_timestamp
 export -f print_success print_warning print_error print_info print_debug
 export -f print_header print_section print_step show_spinner confirm handle_error
-export -f set_error_trap log_file_operation
+export -f set_error_trap log_file_operation log_setup

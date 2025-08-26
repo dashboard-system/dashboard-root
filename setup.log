@@ -5,3 +5,305 @@
 2025-08-13 14:37:44 - Webserver init: SUCCESS
 2025-08-13 14:37:44 - Master compose file: SUCCESS
 2025-08-13 14:38:02 - Docker build: FAILED
+2025-08-25 13:40:53 - Starting initialization process
+2025-08-25 13:41:16 - Starting initialization process
+2025-08-25 13:41:16 - Docker check: SUCCESS
+2025-08-25 13:41:16 - Created MQTT .env file
+2025-08-25 13:41:16 - MQTT server init: SUCCESS
+2025-08-25 13:41:16 - Created webserver .env file
+2025-08-25 13:41:16 - Webserver init: SUCCESS
+2025-08-25 13:41:16 - Master compose file: SUCCESS
+2025-08-25 13:41:17 - Docker build: FAILED
+2025-08-25 13:42:57 - Starting initialization process
+2025-08-25 13:42:58 - Docker check: SUCCESS
+2025-08-25 13:42:58 - MQTT server init: SUCCESS
+2025-08-25 13:42:58 - Webserver init: SUCCESS
+2025-08-25 13:42:58 - Master compose file: SUCCESS
+2025-08-25 13:42:58 - Services start: SKIPPED (missing Dockerfiles)
+2025-08-25 13:43:24 - Starting initialization process
+2025-08-25 13:43:24 - Docker check: SUCCESS
+2025-08-25 13:43:24 - MQTT server init: SUCCESS
+2025-08-25 13:43:24 - Webserver init: SUCCESS
+2025-08-25 13:43:24 - Master compose file: SUCCESS
+2025-08-25 13:43:24 - Services start: SKIPPED (missing Dockerfiles)
+2025-08-25 13:45:21 - Starting initialization process
+2025-08-25 13:45:22 - Submodule init: FAILED
+2025-08-25 13:45:22 - Docker check: SUCCESS
+2025-08-25 13:45:22 - MQTT server init: SUCCESS
+2025-08-25 13:45:22 - Webserver init: SUCCESS
+2025-08-25 13:45:22 - Master compose file: SUCCESS
+2025-08-25 13:45:22 - Services start: SKIPPED (missing Dockerfiles)
+2025-08-25 13:45:37 - Starting initialization process
+2025-08-25 13:45:37 - Submodule init: FAILED
+2025-08-25 13:45:38 - Docker check: SUCCESS
+2025-08-25 13:45:38 - MQTT server init: SUCCESS
+2025-08-25 13:45:38 - Webserver init: SUCCESS
+2025-08-25 13:45:38 - Master compose file: SUCCESS
+2025-08-25 13:45:38 - Services start: SKIPPED (missing Dockerfiles)
+2025-08-25 13:45:47 - Starting initialization process
+2025-08-25 13:45:47 - Submodule init: FAILED
+2025-08-25 13:45:47 - Docker check: SUCCESS
+2025-08-25 13:45:47 - MQTT server init: SUCCESS
+2025-08-25 13:45:47 - Webserver init: SUCCESS
+2025-08-25 13:45:47 - Master compose file: SUCCESS
+2025-08-25 13:45:47 - Services start: SKIPPED (missing Dockerfiles)
+2025-08-25 13:46:17 - Starting initialization process
+2025-08-25 13:46:22 - Submodule init: SUCCESS
+2025-08-25 13:46:22 - Docker check: SUCCESS
+2025-08-25 13:46:22 - MQTT server init: SUCCESS
+2025-08-25 13:46:23 - Webserver init: SUCCESS
+2025-08-25 13:46:23 - Master compose file: SUCCESS
+2025-08-25 13:46:30 - Docker build: FAILED
+2025-08-25 13:47:21 - Starting initialization process
+2025-08-25 13:47:21 - Submodule init: SUCCESS
+2025-08-25 13:47:21 - Docker check: SUCCESS
+2025-08-25 13:47:21 - MQTT server init: SUCCESS
+2025-08-25 13:47:21 - Webserver init: SUCCESS
+2025-08-25 13:47:21 - Master compose file: SUCCESS
+2025-08-25 13:47:22 - Docker build: FAILED
+2025-08-25 13:50:05 - Starting initialization process
+2025-08-25 13:50:05 - Submodule init: SUCCESS
+2025-08-25 13:50:08 - MQTT npm install: SUCCESS
+2025-08-25 13:50:15 - Webserver npm install: FAILED
+2025-08-25 13:50:16 - UI npm install: SUCCESS
+2025-08-25 13:50:16 - Docker check: SUCCESS
+2025-08-25 13:50:17 - MQTT server init: SUCCESS
+2025-08-25 13:50:17 - Webserver init: SUCCESS
+2025-08-25 13:50:17 - Master compose file: SUCCESS
+2025-08-25 13:50:30 - Docker build: FAILED
+2025-08-25 13:50:58 - Starting initialization process
+2025-08-25 13:50:58 - Submodule init: SUCCESS
+2025-08-25 13:51:00 - MQTT npm install: SUCCESS
+2025-08-25 13:51:04 - Webserver npm install: FAILED
+2025-08-25 13:51:05 - UI npm install: SUCCESS
+2025-08-25 13:51:06 - Docker check: SUCCESS
+2025-08-25 13:51:06 - MQTT server init: SUCCESS
+2025-08-25 13:51:06 - Webserver init: SUCCESS
+2025-08-25 13:51:06 - Master compose file: SUCCESS
+2025-08-25 13:51:12 - Docker build: FAILED
+2025-08-25 13:56:22 - Starting initialization process
+2025-08-25 13:56:23 - Submodule init: SUCCESS
+2025-08-25 13:56:25 - MQTT npm install: SUCCESS
+2025-08-25 13:56:30 - Webserver npm install: FAILED
+2025-08-25 13:56:31 - UI npm install: SUCCESS
+2025-08-25 13:56:31 - Docker check: SUCCESS
+2025-08-25 13:56:31 - MQTT server init: SUCCESS
+2025-08-25 13:56:31 - Webserver init: SUCCESS
+2025-08-25 13:56:31 - Master compose file: SUCCESS
+2025-08-25 13:56:40 - Docker build: FAILED
+2025-08-25 13:57:37 - Starting initialization process
+2025-08-25 13:57:37 - Submodule init: SUCCESS
+2025-08-25 13:57:37 - MQTT npm install: SUCCESS
+2025-08-25 13:57:42 - Webserver npm install: FAILED
+2025-08-25 13:57:43 - UI npm install: SUCCESS
+2025-08-25 13:57:44 - Docker check: SUCCESS
+2025-08-25 13:57:44 - MQTT server init: SUCCESS
+2025-08-25 13:57:44 - Webserver init: SUCCESS
+2025-08-25 13:57:44 - Master compose file: SUCCESS
+2025-08-25 13:57:48 - Docker build: FAILED
+2025-08-25 13:57:48 - Initialization completed successfully
+2025-08-25 13:58:08 - Starting initialization process
+2025-08-25 13:58:08 - Submodule init: SUCCESS
+2025-08-25 13:58:09 - MQTT npm install: SUCCESS
+2025-08-25 13:58:14 - Webserver npm install: FAILED
+2025-08-25 13:58:14 - UI npm install: SUCCESS
+2025-08-25 13:58:15 - Docker check: SUCCESS
+2025-08-25 13:58:15 - MQTT server init: SUCCESS
+2025-08-25 13:58:15 - Webserver init: SUCCESS
+2025-08-25 13:58:15 - Master compose file: SUCCESS
+2025-08-25 13:58:20 - Docker build: FAILED
+2025-08-25 13:58:20 - Initialization completed successfully
+2025-08-25 13:59:28 - Starting initialization process
+2025-08-25 13:59:28 - Submodule init: SUCCESS
+2025-08-25 13:59:30 - MQTT npm install: SUCCESS
+2025-08-25 13:59:34 - Webserver npm install: FAILED
+2025-08-25 13:59:35 - UI npm install: SUCCESS
+2025-08-25 13:59:36 - Docker check: SUCCESS
+2025-08-25 13:59:36 - MQTT server init: SUCCESS
+2025-08-25 13:59:36 - Webserver init: SUCCESS
+2025-08-25 13:59:36 - Master compose file: SUCCESS
+2025-08-25 13:59:40 - Docker build: FAILED
+2025-08-25 13:59:40 - Initialization completed successfully
+2025-08-25 14:00:49 - Starting initialization process
+2025-08-25 14:00:49 - Submodule init: SUCCESS
+2025-08-25 14:00:50 - MQTT npm install: SUCCESS
+2025-08-25 14:00:55 - Webserver npm install: FAILED
+2025-08-25 14:00:55 - UI npm install: SUCCESS
+2025-08-25 14:00:56 - Docker check: SUCCESS
+2025-08-25 14:00:56 - MQTT server init: SUCCESS
+2025-08-25 14:00:56 - Webserver init: SUCCESS
+2025-08-25 14:00:56 - Master compose file: SUCCESS
+2025-08-25 14:01:01 - Docker build: FAILED
+2025-08-25 14:01:01 - Initialization completed successfully
+2025-08-25 14:01:19 - Starting initialization process
+2025-08-25 14:01:19 - Submodule init: SUCCESS
+2025-08-25 14:01:20 - MQTT npm install: SUCCESS
+2025-08-25 14:01:24 - Webserver npm install: FAILED
+2025-08-25 14:01:25 - UI npm install: SUCCESS
+2025-08-25 14:01:25 - Docker check: SUCCESS
+2025-08-25 14:01:25 - MQTT server init: SUCCESS
+2025-08-25 14:01:25 - Webserver init: SUCCESS
+2025-08-25 14:01:25 - Master compose file: SUCCESS
+2025-08-25 14:01:31 - Docker build: FAILED
+2025-08-25 14:01:31 - Initialization completed successfully
+2025-08-25 14:02:39 - Starting initialization process
+2025-08-25 14:02:39 - Submodule init: SUCCESS
+2025-08-25 14:02:40 - MQTT npm install: SUCCESS
+2025-08-25 14:02:45 - Webserver npm install: FAILED
+2025-08-25 14:02:46 - UI npm install: SUCCESS
+2025-08-25 14:02:46 - Docker check: SUCCESS
+2025-08-25 14:02:46 - MQTT server init: SUCCESS
+2025-08-25 14:02:46 - Webserver init: SUCCESS
+2025-08-25 14:02:46 - Master compose file: SUCCESS
+2025-08-25 14:02:52 - Docker build: FAILED
+2025-08-25 14:02:52 - Initialization completed successfully
+2025-08-25 14:07:07 - Starting initialization process
+2025-08-25 14:07:07 - Submodule init: SUCCESS
+2025-08-25 14:07:08 - MQTT npm install: SUCCESS
+2025-08-25 14:07:13 - Webserver npm install: FAILED
+2025-08-25 14:07:14 - UI npm install: SUCCESS
+2025-08-25 14:07:14 - Docker check: SUCCESS
+2025-08-25 14:07:14 - MQTT server init: SUCCESS
+2025-08-25 14:07:14 - Webserver init: SUCCESS
+2025-08-25 14:07:14 - Master compose file: SUCCESS
+2025-08-25 14:07:17 - Docker build: FAILED
+2025-08-25 14:07:17 - Initialization completed successfully
+2025-08-25 15:27:50 - Starting initialization process
+2025-08-25 15:27:52 - Submodule update: SUCCESS
+2025-08-25 15:27:52 - Submodule init: SUCCESS
+2025-08-25 15:27:54 - MQTT npm install: SUCCESS
+2025-08-25 15:27:56 - Webserver npm install: SUCCESS
+2025-08-25 15:28:05 - UI npm install: SUCCESS
+2025-08-25 15:28:06 - Docker check: SUCCESS
+2025-08-25 15:28:06 - MQTT server init: SUCCESS
+2025-08-25 15:28:06 - Webserver init: SUCCESS
+2025-08-25 15:28:06 - Master compose file: SUCCESS
+2025-08-25 15:28:28 - Docker build: FAILED
+2025-08-25 15:28:28 - Initialization completed successfully
+2025-08-25 15:32:33 - Starting initialization process
+2025-08-25 15:32:35 - Submodule update: SUCCESS
+2025-08-25 15:32:35 - Submodule init: SUCCESS
+2025-08-25 15:32:37 - MQTT npm install: SUCCESS
+2025-08-25 15:32:38 - Webserver npm install: SUCCESS
+2025-08-25 15:32:39 - UI npm install: SUCCESS
+2025-08-25 15:32:39 - Docker check: SUCCESS
+2025-08-25 15:32:39 - MQTT server init: SUCCESS
+2025-08-25 15:32:39 - Webserver init: SUCCESS
+2025-08-25 15:32:39 - Master compose file: SUCCESS
+2025-08-25 15:32:44 - Docker build: FAILED
+2025-08-25 15:32:44 - Initialization completed successfully
+2025-08-25 15:45:59 - Starting initialization process
+2025-08-25 15:46:00 - Submodule update: SUCCESS
+2025-08-25 15:46:00 - Submodule init: SUCCESS
+2025-08-25 15:46:02 - MQTT npm install: SUCCESS
+2025-08-25 15:46:04 - Webserver npm install: SUCCESS
+2025-08-25 15:46:04 - UI npm install: SUCCESS
+2025-08-25 15:46:05 - Docker check: SUCCESS
+2025-08-25 15:46:05 - MQTT server init: SUCCESS
+2025-08-25 15:46:05 - Webserver init: SUCCESS
+2025-08-25 15:46:05 - Master compose file: SUCCESS
+2025-08-25 15:46:18 - Docker build: FAILED
+2025-08-25 15:46:18 - Initialization completed successfully
+2025-08-25 15:47:02 - Starting initialization process
+2025-08-25 15:47:04 - Submodule update: SUCCESS
+2025-08-25 15:47:04 - Submodule init: SUCCESS
+2025-08-25 15:47:05 - MQTT npm install: SUCCESS
+2025-08-25 15:47:07 - Webserver npm install: SUCCESS
+2025-08-25 15:47:07 - UI npm install: SUCCESS
+2025-08-25 15:47:08 - Docker check: SUCCESS
+2025-08-25 15:47:08 - MQTT server init: SUCCESS
+2025-08-25 15:47:08 - Webserver init: SUCCESS
+2025-08-25 15:47:08 - Master compose file: SUCCESS
+2025-08-25 15:47:13 - Docker build: FAILED
+2025-08-25 15:47:13 - Initialization completed successfully
+2025-08-25 15:59:58 - Starting initialization process
+2025-08-25 16:00:00 - Submodule update: SUCCESS
+2025-08-25 16:00:00 - Submodule init: SUCCESS
+2025-08-25 16:00:01 - MQTT npm install: SUCCESS
+2025-08-25 16:00:04 - Webserver npm install: SUCCESS
+2025-08-25 16:00:05 - UI npm install: SUCCESS
+2025-08-25 16:00:06 - Docker check: SUCCESS
+2025-08-25 16:00:06 - MQTT server init: SUCCESS
+2025-08-25 16:00:06 - Webserver init: SUCCESS
+2025-08-25 16:00:06 - Master compose file: SUCCESS
+2025-08-25 16:00:11 - Docker build: FAILED
+2025-08-25 16:00:11 - Initialization completed successfully
+2025-08-26 10:21:28 - Starting initialization process
+2025-08-26 10:21:31 - Submodule update: SUCCESS
+2025-08-26 10:21:31 - Submodule init: SUCCESS
+2025-08-26 10:21:34 - MQTT npm install: SUCCESS
+2025-08-26 10:21:35 - Webserver npm install: SUCCESS
+2025-08-26 10:21:43 - UI npm install: SUCCESS
+2025-08-26 10:21:44 - Docker check: SUCCESS
+2025-08-26 10:21:44 - MQTT server init: SUCCESS
+2025-08-26 10:21:44 - Webserver init: SUCCESS
+2025-08-26 10:21:44 - Master compose file: SUCCESS
+2025-08-26 10:21:54 - Docker build: FAILED
+2025-08-26 10:21:54 - Initialization completed successfully
+2025-08-26 10:24:45 - Starting initialization process
+2025-08-26 10:24:48 - Submodule update: SUCCESS
+2025-08-26 10:24:48 - Submodule init: SUCCESS
+2025-08-26 10:24:49 - MQTT npm install: SUCCESS
+2025-08-26 10:24:50 - Webserver npm install: SUCCESS
+2025-08-26 10:24:51 - UI npm install: SUCCESS
+2025-08-26 10:24:52 - Docker check: SUCCESS
+2025-08-26 10:24:52 - MQTT server init: SUCCESS
+2025-08-26 10:24:52 - Webserver init: SUCCESS
+2025-08-26 10:24:52 - Master compose file: SUCCESS
+2025-08-26 10:24:56 - Docker build: FAILED
+2025-08-26 10:24:56 - Initialization completed successfully
+2025-08-26 10:27:01 - Starting initialization process
+2025-08-26 10:27:03 - Submodule update: SUCCESS
+2025-08-26 10:27:03 - Submodule init: SUCCESS
+2025-08-26 10:27:05 - MQTT npm install: SUCCESS
+2025-08-26 10:27:06 - Webserver npm install: SUCCESS
+2025-08-26 10:27:07 - UI npm install: SUCCESS
+2025-08-26 10:27:08 - Docker check: SUCCESS
+2025-08-26 10:27:08 - MQTT server init: SUCCESS
+2025-08-26 10:27:08 - Webserver init: SUCCESS
+2025-08-26 10:27:08 - Master compose file: SUCCESS
+2025-08-26 10:27:36 - Docker build: SUCCESS
+2025-08-26 10:27:37 - Services start: FAILED
+2025-08-26 10:27:37 - Initialization completed successfully
+2025-08-26 10:28:12 - Starting initialization process
+2025-08-26 10:28:14 - Submodule update: SUCCESS
+2025-08-26 10:28:14 - Submodule init: SUCCESS
+2025-08-26 10:28:17 - MQTT npm install: SUCCESS
+2025-08-26 10:28:18 - Webserver npm install: SUCCESS
+2025-08-26 10:28:19 - UI npm install: SUCCESS
+2025-08-26 10:28:20 - Docker check: SUCCESS
+2025-08-26 10:28:20 - MQTT server init: SUCCESS
+2025-08-26 10:28:20 - Webserver init: SUCCESS
+2025-08-26 10:28:20 - Master compose file: SUCCESS
+2025-08-26 10:28:26 - Docker build: SUCCESS
+2025-08-26 10:28:26 - Services start: SUCCESS
+2025-08-26 10:28:57 - Initialization completed successfully
+2025-08-26 10:43:16 - Starting initialization process
+2025-08-26 10:44:43 - Starting initialization process
+2025-08-26 10:45:23 - Starting initialization process
+2025-08-26 10:45:47 - Starting initialization process
+2025-08-26 10:45:50 - Submodule update: SUCCESS
+2025-08-26 10:45:50 - Submodule init: SUCCESS
+2025-08-26 10:45:52 - MQTT server npm install: SUCCESS
+2025-08-26 10:45:56 - webserver npm install: SUCCESS
+2025-08-26 10:45:57 - UI submodule npm install: SUCCESS
+2025-08-26 10:45:57 - Docker check: SUCCESS
+2025-08-26 10:45:57 - MQTT server init: SUCCESS
+2025-08-26 10:45:57 - Webserver init: SUCCESS
+2025-08-26 10:45:57 - Master compose file: SUCCESS
+2025-08-26 10:46:04 - Docker build: SUCCESS
+2025-08-26 10:46:04 - Services start: FAILED
+2025-08-26 10:46:04 - Initialization completed successfully
+2025-08-26 10:47:40 - Starting initialization process
+2025-08-26 10:47:43 - Submodule update: SUCCESS
+2025-08-26 10:47:43 - Submodule init: SUCCESS
+2025-08-26 10:47:45 - MQTT server npm install: SUCCESS
+2025-08-26 10:47:46 - webserver npm install: SUCCESS
+2025-08-26 10:47:47 - UI submodule npm install: SUCCESS
+2025-08-26 10:47:47 - Docker check: SUCCESS
+2025-08-26 10:47:47 - MQTT server init: SUCCESS
+2025-08-26 10:47:48 - Webserver init: SUCCESS
+2025-08-26 10:47:48 - Master compose file: SUCCESS
+2025-08-26 10:47:54 - Docker build: SUCCESS
+2025-08-26 10:47:57 - Services start: FAILED
+2025-08-26 10:47:57 - Initialization completed successfully
