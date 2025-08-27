@@ -1,0 +1,32 @@
+{
+  "name": "dashboard-root",
+  "version": "1.0.0",
+  "description": "Multi-service dashboard project with MQTT server, web server, and UI",
+  "scripts": {
+    "update-submodules": "./update-submodules.sh",
+    "update-subs": "./update-submodules.sh",
+    "init": "./init.sh",
+    "build": "docker-compose build",
+    "up": "docker-compose up -d",
+    "down": "docker-compose down",
+    "logs": "docker-compose logs -f",
+    "status": "docker-compose ps"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dashboard-system/dashboard-root.git"
+  },
+  "keywords": [
+    "dashboard",
+    "mqtt",
+    "iot",
+    "webserver",
+    "docker",
+    "submodules"
+  ],
+  "author": "Haorong",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

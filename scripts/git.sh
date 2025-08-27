@@ -88,6 +88,8 @@ update_submodule_to_main() {
 update_submodules_to_latest() {
     local update_success=true
     
+    print_info "🔄 Updating all 3 submodules to latest commits..."
+    
     # Update MQTT server submodule
     if ! update_submodule_to_main "$MQTT_DIR" "MQTT server"; then
         update_success=false
@@ -112,13 +114,39 @@ update_submodules_to_latest() {
         update_success=false
     fi
     
+    if [ "$update_success" = true ]; then
+        print_success "✅ All 3 submodules updated successfully!"
+        print_info "📋 Current submodule status:"
+        git submodule status --recursive
+    else
+        print_warning "⚠️  Some submodules failed to update"
+    fi
+    
     [ "$update_success" = true ]
+}
+
+# Standalone function to update submodules (can be called directly)
+update_all_submodules() {
+    print_info "🚀 Starting submodule update process..."
+    
+    if ! is_git_repo; then
+        print_warning "Not in a git repository"
+        return 1
+    fi
+    
+    if ! has_submodules; then
+        print_warning "No submodules configured"
+        return 1
+    fi
+    
+    update_submodules_to_latest
 }
 
 # Install npm dependencies for single submodule
 install_npm_deps_for_submodule() {
     local submodule_dir="$1"
     local submodule_name="$2"
+    local should_build="$3"
     
     if [ -f "$submodule_dir/package.json" ]; then
         print_info "Installing $submodule_name dependencies..."
@@ -126,6 +154,22 @@ install_npm_deps_for_submodule() {
         if npm install; then
             print_success "$submodule_name dependencies installed"
             log_setup "$submodule_name npm install: SUCCESS"
+            
+            # Build if requested and build script exists
+            if [ "$should_build" = "true" ]; then
+                if grep -q '"build"' package.json; then
+                    print_info "Building $submodule_name..."
+                    if npm run build; then
+                        print_success "$submodule_name built successfully"
+                        log_setup "$submodule_name npm build: SUCCESS"
+                    else
+                        print_warning "Failed to build $submodule_name"
+                        log_setup "$submodule_name npm build: FAILED"
+                    fi
+                else
+                    print_info "$submodule_name has no build script, skipping build"
+                fi
+            fi
         else
             print_warning "Failed to install $submodule_name dependencies"
             log_setup "$submodule_name npm install: FAILED"
@@ -138,9 +182,9 @@ install_npm_deps_for_submodule() {
 install_submodule_deps() {
     print_info "Installing npm dependencies for submodules..."
     
-    install_npm_deps_for_submodule "$MQTT_DIR" "MQTT server"
-    install_npm_deps_for_submodule "$WEBSERVER_DIR" "webserver"
-    install_npm_deps_for_submodule "$WEBSERVER_DIR/ui" "UI submodule"
+    install_npm_deps_for_submodule "$MQTT_DIR" "MQTT server" "false"
+    install_npm_deps_for_submodule "$WEBSERVER_DIR" "webserver" "false"  
+    install_npm_deps_for_submodule "$WEBSERVER_DIR/ui" "UI submodule" "true"
     
     return 0
 }
